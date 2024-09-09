@@ -1,5 +1,6 @@
 package org.example.user.tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
 import org.example.BaseTest;
@@ -9,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class RegistrationUserTest extends BaseTest {
 
-    //тест с позитивным сценарием
     @Test
+    @Description("тест с позитивным сценарием")
     public void positiveUserRegistrationTest() {
 
         //регистрация юзера с позитивным сценарием
@@ -22,8 +23,8 @@ public class RegistrationUserTest extends BaseTest {
 
     }
 
-    //повторная регистрация юзера
     @Test
+    @Description("повторная регистрация юзера")
     public void secondUserRegistrationTest() {
 
         //регистрация юзера с позитивным сценарием
@@ -40,8 +41,8 @@ public class RegistrationUserTest extends BaseTest {
 
     }
 
-    //регистрация эзера без одного обязательного поля
     @Test
+    @Description("регистрация эзера без одного обязательного поля")
     public void userRegistrationWithoutOneFieldTest() {
 
         //регистрация юзера без одного обязательного поля

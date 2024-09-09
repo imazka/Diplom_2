@@ -1,5 +1,6 @@
 package org.example.order.tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
 import org.example.BaseTest;
@@ -12,8 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CreateOrderTest extends BaseTest {
 
-    //создание заказа автирозованным юзером с ингредиентами
     @Test
+    @Description("создание заказа автирозованным юзером с ингредиентами")
     public void createOrderWithAuthorizationTest() {
 
         //список ингредиентов
@@ -43,8 +44,8 @@ public class CreateOrderTest extends BaseTest {
 
     }
 
-    //создание заказа автирозованным юзером без ингредиентов
     @Test
+    @Description("создание заказа автирозованным юзером без ингредиентов")
     public void createOrderWithoutIngredientsTest() {
 
         //регистрация юзера с позитивным сценарием
@@ -69,8 +70,8 @@ public class CreateOrderTest extends BaseTest {
 
     }
 
-    //создание заказа автирозованным юзером с неверным хэшем ингредиентов
     @Test
+    @Description("создание заказа автирозованным юзером с неверным хэшем ингредиентов")
     public void createOrderWithIncorrectIngredientsHashTest() {
 
         //список ингредиентов
@@ -102,8 +103,8 @@ public class CreateOrderTest extends BaseTest {
 
     }
 
-    //создание заказа без авторизации
     @Test
+    @Description("создание заказа без авторизации")
     public void createOrderWithoutAuthorizationTest() {
 
         //список ингредиентов

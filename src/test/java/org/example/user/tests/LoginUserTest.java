@@ -1,5 +1,6 @@
 package org.example.user.tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
 import org.example.BaseTest;
@@ -10,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class LoginUserTest extends BaseTest {
 
-    //авторизация с позитивным сценарием
     @Test
+    @Description("авторизация с позитивным сценарием")
     public void loginRegisteredUserTest() {
 
         //регистрация юзера с позитивным сценарием
@@ -30,8 +31,8 @@ public class LoginUserTest extends BaseTest {
 
     }
 
-    //авторизация с неверным логином или паролем
     @Test
+    @Description("авторизация с неверным логином или паролем")
     public void loginWithIncorrectNameTest() {
 
         //логин зарегистрированного юзера

@@ -9,14 +9,14 @@ import static io.restassured.RestAssured.given;
 
 public class OrderClient extends RestClient {
 
-    @Step
+    @Step("create order")
     public ValidatableResponse create(Ingredient ingredient, String jwt) {
 
         return given().spec(getBaseSpec(jwt)).body(ingredient).when().post("orders").then();
 
     }
 
-    @Step
+    @Step("get list of user orders")
     public ValidatableResponse get(String jwt) {
 
         return given().spec(getBaseSpec(jwt)).when().get("orders").then();

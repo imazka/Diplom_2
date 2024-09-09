@@ -1,5 +1,6 @@
 package org.example.order.tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
 import org.example.BaseTest;
@@ -10,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class GetUserOrders extends BaseTest {
 
-    //заказы авторизованного юзера
     @Test
+    @Description("заказы авторизованного юзера")
     public void getUserOrdersWithAuthorizationTest() {
 
         //регистрация юзера с позитивным сценарием
@@ -35,8 +36,8 @@ public class GetUserOrders extends BaseTest {
 
     }
 
-    //заказы не авторизованного юзера
     @Test
+    @Description("заказы не авторизованного юзера")
     public void getUserOrdersWithoutAuthorizationTest() {
 
         //регистрация юзера с позитивным сценарием

@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class IngredientClient extends RestClient {
 
-    @Step
+    @Step("get list of all ingredients")
     public ValidatableResponse getAll() {
 
         return given().spec(getBaseSpec()).when().get("ingredients").then();

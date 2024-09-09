@@ -1,5 +1,6 @@
 package org.example.user.tests;
 
+import io.qameta.allure.Description;
 import io.restassured.response.ValidatableResponse;
 import org.apache.http.HttpStatus;
 import org.example.BaseTest;
@@ -10,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class UpdateUserTest extends BaseTest {
 
-    //изменение данных зарегистрированного пользователя без авторизации
     @Test
+    @Description("изменение данных зарегистрированного пользователя без авторизации")
     public void updateUnAuthorizedUserTest() {
 
         //регистрация юзера с позитивным сценарием
@@ -30,8 +31,8 @@ public class UpdateUserTest extends BaseTest {
 
     }
 
-    //изменение данных зарегистрированного пользователя с авторизацией
     @Test
+    @Description("изменение данных зарегистрированного пользователя с авторизацией")
     public void updateAuthorizedUserTest() {
 
         //регистрация юзера с позитивным сценарием
